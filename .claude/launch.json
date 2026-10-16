@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vid-scenes",
+      "runtimeExecutable": "C:/Users/Danny/miniconda3/Scripts/conda.exe",
+      "runtimeArgs": ["run", "--no-capture-output", "-n", "vid-scenes", "python", "-m", "uvicorn", "app.main:app", "--port", "8000"],
+      "port": 8000
+    }
+  ]
+}

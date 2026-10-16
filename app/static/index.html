@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vid-scenes</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">◆</span> vid-scenes</div>
+    <nav class="tabs">
+      <button data-view="library" class="active">素材库</button>
+      <button data-view="music">音乐</button>
+      <button data-view="renders">成片</button>
+    </nav>
+    <div id="jobs-indicator" class="jobs-indicator" hidden></div>
+  </header>
+
+  <main>
+    <!-- 素材库 -->
+    <section id="view-library" class="view active">
+      <div class="toolbar">
+        <div id="lib-stats" class="stats"></div>
+        <label class="btn primary">
+          上传视频
+          <input id="video-input" type="file" accept="video/*" multiple hidden>
+        </label>
+      </div>
+      <div id="video-grid" class="card-grid"></div>
+      <div id="video-detail" class="detail" hidden></div>
+    </section>
+
+    <!-- 音乐 -->
+    <section id="view-music" class="view">
+      <div class="split">
+        <aside class="sidebar">
+          <label class="btn primary block">
+            上传音乐
+            <input id="music-input" type="file" accept="audio/*" hidden>
+          </label>
+          <ul id="music-list" class="list"></ul>
+        </aside>
+        <div id="music-detail" class="pane"><p class="empty">上传或选择一首音乐</p></div>
+      </div>
+    </section>
+
+    <!-- 成片 -->
+    <section id="view-renders" class="view">
+      <div class="split">
+        <aside class="sidebar">
+          <ul id="comp-list" class="list"></ul>
+        </aside>
+        <div id="comp-detail" class="pane"><p class="empty">在“音乐”页生成卡点视频</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="drop-overlay" class="drop-overlay" hidden>松开以上传</div>
+  <div id="toast" class="toast" hidden></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

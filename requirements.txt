@@ -1,0 +1,16 @@
+# 先安装带 CUDA 的 PyTorch（见 CLAUDE.md），再安装本文件
+fastapi
+uvicorn[standard]
+python-multipart
+sqlalchemy>=2.0
+numpy
+opencv-python-headless
+scenedetect
+librosa
+soundfile
+soxr
+einops
+rotary-embedding-torch
+tqdm
+pytest
+httpx
